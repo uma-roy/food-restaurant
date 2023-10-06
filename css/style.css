@@ -1,0 +1,319 @@
+/* TABLE OF CONTENTS
+1. General
+2. Navbar
+3. Banner
+4. Counter
+5. About
+6. Stroy
+7. Explore Food
+8. Testimonial
+9. Team
+10. Book Food
+11. Footer */
+
+/* 1. General */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --color-primary: #f5c332;
+    --color-secondry: #231e41;
+    --color-white: #fff;
+    --color-black: #1c1c1c;
+
+    --text-primary: #f5c332;
+    --text-secondry: #231e41;
+    --text-white: #fff;
+    --text-color: #555;
+    --text-gray: #999;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: var(--color-primary) !important;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+    font-weight: 400;
+}
+::-webkit-scrollbar{
+    width: 0.425rem;
+}
+::-webkit-scrollbar-track{
+    background: var(--color-white);
+}
+::-webkit-scrollbar-track{
+    background: var(--color-primary);
+}
+h1{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--text-secondry);
+    text-transform: capitalize;
+}
+h2{
+    font-size: 36px;
+    font-weight: 700;
+    /* line-height: 20px; */
+    color: var(--text-secondry);
+    text-transform: capitalize;
+}
+h4{
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondry);
+    text-transform: capitalize;
+}
+h5{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondry);
+    text-transform: capitalize;
+}
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+.wrapper{
+    padding: 100px 0;
+}
+.text-content{
+    width: 100%;
+    margin: 0 auto;
+}
+
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text h2{
+    color: var(--color-primary);
+}
+/* 2. Navbar */
+.navigation-warp.scroll-on{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    background: var(--color-white);
+    z-index: 1000;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.navigation-warp .navbar-brand img{
+    width: 13rem;
+}
+.navigation-warp .nav-item{
+    padding: 10px;
+    transition: all 200ms linear;
+}
+.navigation-warp .navbar-toggler:focus{
+    outline: none;
+    border: unset;
+    box-shadow: none;
+}
+.navigation-warp .nav-link{
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-secondry);
+    letter-spacing: 1px;
+}
+.main-btn{
+    padding: 5px 23px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: capitalize;
+    box-shadow: none;
+    -webkit-transition: all 0.4s ease-out 0s;
+    -ms-transition: all 0.4s ease-out 0s;
+    -o-transition: all 0.4s ease-out 0s;
+    -moz-transition: all 0.4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+    border: 3px solid var(--color-primary);
+    background: var(--color-primary);
+    color: var(--color-black);
+    margin-left: 10px;
+}
+.main-btn:hover{
+    background: transparent;
+    color: var(--color-primary);
+}
+/* BANNER  */
+.top-banner{
+    width: 100%;
+    background-image: url("../images/bg/bg-1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 238px 0 150px;
+}
+.top-banner .main-btn i{
+    margin-left: 6px;
+}
+/* SECTION COUNT */
+.counter-section{
+    background: var(--color-black);
+    padding: 40px 0;
+}
+.counter-section p{
+    color: var(--text-white);
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+/* ============ SECTION ABOUT ============ */
+.food-type{
+    padding-top: 3.25rem;
+}
+.food-type ul li{
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 2rem;
+    position: relative;
+    margin-left: 1.875rem;
+}
+.food-type ul li::before{
+    position: absolute;
+    left: -2.1875rem;
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-family: FontAwesome;
+    content: '\f00c';
+    display: inline-block;
+    font-weight: 900;
+}
+/* ============ SECTION STORY ============ */
+.story-section{
+    width: 100%;
+    height: 28.125rem;
+    background: url(../images/bg/bg-2.jpg) no-repeat center center/cover;
+    padding-top: 6.25rem;
+    text-align: center;
+}
+/* ============ SECTION EXPLORE FOOD ============ */
+.explore-food .card{
+    background: transparent;
+    border-radius: 15px;
+    border: 0.125rem dashed var(--color-primary);
+}
+.explore-food .card img{
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+}
+.explore-food .card span{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-primary);
+}
+.explore-food .card span del{
+    color: var(--text-gray);
+    margin-left: 0.5rem;
+}
+/* SECTION TESTIMONIAL */
+.testimonial-section{
+    background: url(../images/bg/bg-4.jpg) no-repeat center center/cover;
+}
+.testimonial-section .carousel-indicators{
+    bottom: -79px;
+}
+.testimonial-section .carousel-indicators button{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+}
+.testimonial-section .carousel-item{
+    margin-top: 3rem;
+    padding: 10rem 3.125rem;
+    background: var(--color-white);
+    border-radius: 15px;
+    text-align: center;
+}
+.testimonial-section .carousel-item img{
+    max-width: 5rem;
+    border-radius: 50%;
+    padding: 5px;
+    border: 2px solid var(--color-primary);
+}
+.testimonial-section .carousel-item .arousel-caption p{
+    font-size: 20px;
+    line-height: 2rem;
+    padding: 1px 11%;
+}
+/* ---------- SECTION TEAM ---------- */
+.team .card{
+    background: var(--color-black);
+    border-radius: 0.625rem;
+    border: .25rem solid var(--color-primary);
+    text-align: center;
+}
+.team .card img{
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+.team .card h4{
+    color: var(--color-primary);
+    text-transform: uppercase;
+}
+.team .card h6,
+.team .card p{
+    color: var(--color-white);
+}
+.team .social-icon i{
+    font-size: 1.125rem;
+    transition: all 300ms ease;
+    margin: .3125rem;
+    background: var(--color-primary);
+    color: var(--text-white);
+    width: 2.1875rem;
+    height: 2.1875rem;
+    border-radius: 50%;
+    line-height: 2.1875rem;
+}
+.team .social-icon i:hover{
+    background: var(--color-white);
+    color: var(--text-primary);
+}
+.book-food{
+    width: 100%;
+    background: url(../images/bg/bg-3.jpg) no-repeat center center/cover;
+    background-attachment: fixed;
+    padding: 4.375rem 0;
+}
+/* DOWNLOAD APP */
+.download-app{
+    width: 100%;
+    background: url(../images/bg/bg-5.jpg) no-repeat center center/cover;
+}
+/* FOOTER  */
+.footer{
+    background: var(--color-black);
+}
+.footer .footer-link{
+    font-size: 1rem;
+    color: var(--text-white);
+    padding: 0 1.875rem;
+}
+.footer a{
+    font-size: 1.5rem;
+    color: var(--text-white);
+    padding: 0 1rem;
+}
